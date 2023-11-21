@@ -109,7 +109,7 @@ export const shadowSlice = createSlice({
       console.log("Before : " + currentInput.value);
 
       // We update the value
-    //   currentInput.value = action.payload.value;
+      currentInput.value = action.payload.value;
 
       console.log("After : " + currentInput.value);
     },
