@@ -2,6 +2,7 @@ import {useState, useEffect} from "react"
 import chevron from "../../assets/chevron.svg"
 import ShadowRange from "./ShadowRange"
 import ShadowColorPicker from "./ShadowColorPicker"
+import ShadowCheckbox from "./ShadowCheckbox"
 
 export default function Shadow({panelNumber, shadow}) {
 
