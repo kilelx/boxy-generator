@@ -37,7 +37,6 @@ export const boxSlice = createSlice({
     reducers: {
         updateBoxValue: (state, action) => {
             // Find the element which number equals to inputNumber, and then the value equals to the payload
-            console.log(action.payload);
             state.find(el => el.inputNumber === action.payload.inputNumber).value = action.payload.value
         }
     }

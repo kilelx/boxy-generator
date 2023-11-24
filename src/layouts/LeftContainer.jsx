@@ -25,7 +25,7 @@ export default function LeftContainer() {
                 <button
                 key={index}
                 onClick={() => setTabs(index)}
-                className={`min-w-[125px] py-2 px-3 mr-4 font-bold border-t border-x border-gray-300 bg-slate-50 hover:bg-slate-100 text-slate-700 transition rounded-t focus:outline-none focus:ring-2 focus:ring-blue-300 ring-inset ${tabs !== index ? "bg-gray-200 border-b" : ""}`}
+                className={`min-w-[125px] py-2 px-3 mr-4 font-bold border-t border-x border-gray-300 bg-slate-50 hover:bg-slate-100 text-slate-700 transition rounded-t focus:outline-none focus:ring-2 focus:ring-blue-300 ring-inset ${tabs !== index ? "bg-slate-100 border-b" : ""}`}
                 >{tab.name}</button>
             ))}
         </div>

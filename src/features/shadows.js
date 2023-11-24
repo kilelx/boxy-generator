@@ -37,7 +37,7 @@ const initialState = [
         minMax: [-250, 250],
       },
       {
-        inputNumber: 4,
+        inputNumber: 5,
         name: "Color",
         value: "#4f4f4f",
         type: "color",
@@ -87,7 +87,7 @@ export const shadowSlice = createSlice({
             minMax: [-250, 250],
           },
           {
-            inputNumber: 4,
+            inputNumber: 5,
             name: "Color",
             value: "#4f4f4f",
             type: "color",
@@ -98,24 +98,21 @@ export const shadowSlice = createSlice({
     updateShadowValue: (state, action) => {
       // We select the good shadow
       const currentShadow = state.find(
-        shadow => shadow.id === action.payload.shadowID
+        (shadow) => shadow.id === action.payload.shadowID
       );
 
       // We select the good input
       const currentInput = currentShadow.inputs.find(
-        input => input.inputNumber === action.payload.inputNumber
+        (input) => input.inputNumber === action.payload.inputNumber
       );
-
-      console.log("Before : " + currentInput.value);
 
       // We update the value
       currentInput.value = action.payload.value;
-
-      console.log("After : " + currentInput.value);
     },
     updateCheckbox: (state, action) => {},
   },
 });
 
-export const { removeShadow, addShadow, updateShadowValue, updateCheckbox } = shadowSlice.actions;
+export const { removeShadow, addShadow, updateShadowValue, updateCheckbox } =
+  shadowSlice.actions;
 export default shadowSlice.reducer;
