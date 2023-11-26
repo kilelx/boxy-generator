@@ -18,18 +18,18 @@ export default function LeftContainer() {
     ]
   return (
     <div
-    className="relative mt-20 w-[600px] h-[550px] border rounded-b rounded-tr border-gray-300 shadow-xl bg-gray-50 md:mt-0"
+    className="relative mt-20 w-[600px] h-[550px] border rounded-b rounded-tr border-gray-300 shadow-xl bg-gray-50 md:mt-15 mb-10"
     >
         <div className="flex absolute -translate-y-full -left-[1px]">
             {tabsList.map((tab, index) => (
                 <button
                 key={index}
                 onClick={() => setTabs(index)}
-                className={`min-w-[125px] py-2 px-3 mr-4 font-bold border-t border-x border-gray-300 bg-slate-50 hover:bg-slate-100 text-slate-700 transition rounded-t focus:outline-none focus:ring-2 focus:ring-blue-300 ring-inset ${tabs !== index ? "bg-slate-100 border-b" : ""}`}
+                className={`min-w-[125px] py-2 px-3 mr-4 font-bold border-t border-x border-gray-300 hover:bg-slate-100 text-slate-700 transition rounded-t focus:outline-none focus:ring-2 focus:ring-blue-300 ring-inset ${tabs !== index ? "bg-slate-200 border-b" : "bg-slate-50"}`}
                 >{tab.name}</button>
             ))}
         </div>
-        <div className="overlow-auto">
+        <div className="h-full overflow-auto">
             {tabsList[tabs].component}
         </div>
     </div>

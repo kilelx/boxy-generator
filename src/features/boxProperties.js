@@ -14,14 +14,14 @@ const initialState = [
                 name: "Height",
                 value: 250,
                 type: "range",
-                minMax: [0, 500],
+                minMax: [10, 500],
             },
             {
                 inputNumber: 3,
                 name: "Width",
                 value: 250,
                 type: "range",
-                minMax: [0, 500],
+                minMax: [10, 500],
             },
             {
                 inputNumber: 4,
